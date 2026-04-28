@@ -7,10 +7,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.Eugeo.gestion_restaurante.Entity.DetallePedido;
 import com.Eugeo.gestion_restaurante.Entity.EstadoPedido;
 import com.Eugeo.gestion_restaurante.Entity.Mesa;
 import com.Eugeo.gestion_restaurante.Entity.Pedido;
+import com.Eugeo.gestion_restaurante.Entity.Producto;
 import com.Eugeo.gestion_restaurante.Repository.PedidoRepository;
+import com.Eugeo.gestion_restaurante.Repository.ProductoRepository;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +23,7 @@ import lombok.RequiredArgsConstructor;
 public class PedidoService {
 
     private final PedidoRepository pedidoRepository;
-    private final PedidoRepository productoRepository;
+    private final ProductoRepository productoRepository;
     private final MesaService mesaService;
 
     @Transactional
