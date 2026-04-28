@@ -42,7 +42,7 @@ public class UsuarioService {
             throw new ResponseStatusException(
                     HttpStatus.BAD_REQUEST, "Email ya registrado");
         }
-
+        
         return repository.save(usuario);
     }
 
@@ -58,7 +58,8 @@ public class UsuarioService {
     }
 
     public void delete(Long id) {
-        Usuario usuario = findById(id); // posible cambio
+        Usuario usuario = findById(id); //posible cambio
         repository.deleteById(usuario.getId());
     }
 }
+
