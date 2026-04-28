@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.Eugeo.gestion_restaurante.Entity.EstadoPedido;
 import com.Eugeo.gestion_restaurante.Entity.Pedido;
+import com.Eugeo.gestion_restaurante.Entity.Usuario;
 
 @Repository
 public interface PedidoRepository extends JpaRepository<Pedido, Long>{
